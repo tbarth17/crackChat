@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>crackChat</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <script type='text/x-handlebars' data-template-name='application'>
+      <section class="chat-app">
+
+        <h1>Crack!</h1>
+        {{outlet}}
+      </section>
+    </script>
+
+    <script type='text/x-handlebars' data-template-name="index">
+      <div class='chat-window-container'>
+
+        <div class='sidebar-window'>
+          <ul class='other-users'>
+            <li>TimeWizard</li>
+            <li>Matt</li>
+            <li>Otherguy</li>
+          </ul>
+
+        </div>
+
+        <div class='chat-window'>
+          <ul class='chat-content'>
+            {{#each}}
+              <li>
+                <span class='username-tag'>{{username}} -</span>
+                <span class='message-content'>{{message}}</span>
+                <span class='timestamp-content'>{{timestamp}}</span>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <footer>
+          <input type="text" class='chat-input'>
+        </footer>
+      </div>
+    </script>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/jquery.js"></script>
+    <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/handlebars/handlebars.js"></script>
+    <script src="../bower_components/ember/ember.js"></script>
+    <script src="../bower_components/ember-data/ember-data.js"></script>
+    <script src="../bower_components/firebase/firebase.js"></script>
+    <script src="../bower_components/emberfire/dist/emberfire.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="js/application.js"></script>
+        <script src="js/models/chat.js"></script>
+        <script src="js/router.js"></script>
+
+        <!-- endbuild -->
+</body>
+</html>

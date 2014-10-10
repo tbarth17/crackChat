@@ -1,0 +1,61 @@
+ // Bourbon & Neat
+@import '../../bower_components/bourbon/dist/bourbon';
+@import '../../bower_components/neat/app/assets/stylesheets/neat';
+
+// Custom Styles
+
+body {
+  /* background: blue; */
+  background: #00baff;
+}
+
+.chat-app {
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.chat-window-container {
+   @include outer-container;
+   margin: 0 auto;
+}
+
+.chat-content {
+  list-style: none;
+}
+
+.sidebar-window {
+  @include span-columns(3);
+  height: 500px;
+  /* background: green; */
+  background: #efefef;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.chat-window {
+   @include span-columns(9);
+   @include omega();
+   height: 500px;
+   /* background: red; */
+   background: #b7e0f1;
+   border: 1px solid gray;
+   border-radius: 5px;
+}
+
+footer {
+@include span-columns(9);
+  float: right;
+}
+
+.chat-input {
+  height: 30px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.username-tag {
+  font-weight: bold;
+}
