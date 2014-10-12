@@ -42,6 +42,12 @@ body {
    background: #b7e0f1;
    border: 1px solid gray;
    border-radius: 5px;
+   overflow: scroll;
+
+}
+
+.timestamp-content {
+  float: right;
 }
 
 footer {

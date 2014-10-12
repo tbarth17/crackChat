@@ -34,10 +34,10 @@
       <div class='chat-window-container'>
 
         <div class='sidebar-window'>
-          <ul class='other-users'>
-            <li>TimeWizard</li>
-            <li>Matt</li>
-            <li>Otherguy</li>
+          <ul class='other-rooms'>
+            <li>TimeWizard Room</li>
+            <li>Matt Room</li>
+            <li>Otherguy Room</li>
           </ul>
 
         </div>
@@ -54,19 +54,28 @@
           </ul>
         </div>
         <footer>
-          <input type="text" class='chat-input'>
+          {{input type="text" class='chat-input' value=newChat placeholder='Add chats' action='createChat'}}
         </footer>
       </div>
     </script>
+
+    <script type='text/x-handlebars' data-template-name='login'>
+      <h2>What's your name crackhead?</h2>
+      {{input type='text' value=username placeholder='User Name'}}
+      {{input type='text' value=email placeholder='Email'}}
+      <button {{action 'logIn'}}>Log in</button>
+    </script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
+    <script src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js'></script>
     <script src="../bower_components/jquery/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
     <script src="../bower_components/handlebars/handlebars.js"></script>
     <script src="../bower_components/ember/ember.js"></script>
     <script src="../bower_components/ember-data/ember-data.js"></script>
     <script src="../bower_components/firebase/firebase.js"></script>
-    <script src="../bower_components/emberfire/dist/emberfire.min.js"></script>
+    <script src="../bower_components/emberfire/dist/emberfire.js"></script>
+
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -74,6 +83,10 @@
         <script src="js/application.js"></script>
         <script src="js/models/chat.js"></script>
         <script src="js/router.js"></script>
+        <script src="js/controllers/application_controller.js"></script>
+        <script src="js/controllers/login_controller.js"></script>
+        <script src="js/controllers/index_controller.js"></script>
+
 
         <!-- endbuild -->
 </body>
